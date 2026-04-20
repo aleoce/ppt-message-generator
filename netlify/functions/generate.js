@@ -18,7 +18,7 @@ exports.handler = async function (event) {
         "Authorization": `Bearer ${API_KEY}`,
       },
       body: JSON.stringify({
-        model: "grok-beta",
+        model: "grok-3-mini-fast",
         messages: [
           {
             role: "system",
