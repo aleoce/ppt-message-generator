@@ -44,7 +44,7 @@ exports.handler = async function (event) {
         body: JSON.stringify({ message: text }),
       };
     } else {
-      return { statusCode: 500, body: JSON.stringify({ error: "No message returned" }) };
+      return { statusCode: 500, body: JSON.stringify({ error: JSON.stringify(data) }) };
     }
   } catch (err) {
     return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
